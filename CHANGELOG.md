@@ -1,5 +1,12 @@
 ## [v1.0.2] — 2026-04-25
 
+## [v1.0.3] — 2026-04-25
+
+### Bug Fixes
+- fix(tf018): add commitlint.config.cjs so PR-validation has enforceable rules (#23)
+- fix(tf017): add .tfsec/config.yml excluding examples and downloaded modules (#22)
+
+
 ### Bug Fixes
 - fix: use correct provider azurerm in tf-checks workflow
 - fix(ci): normalize automerge.yml to pr-auto-merge.yml@master
