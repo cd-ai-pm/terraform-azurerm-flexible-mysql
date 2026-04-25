@@ -11,12 +11,22 @@ jobs:
     with:
       working_directory: './examples/complete/'
       provider: azurerm
+    secrets:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
 
   mysql_with_private_endpoint-example:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@88efd7724e007c8f721a219498be29e0c9ad471b
     with:
       working_directory: './examples/mysql_with_private_endpoint/'  
       provider: azurerm
+    secrets:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
 # Seperate Job for TFlint workflow call
   tf-lint:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-lint.yml@88efd7724e007c8f721a219498be29e0c9ad471b
